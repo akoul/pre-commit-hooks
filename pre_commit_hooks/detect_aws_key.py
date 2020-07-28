@@ -12,7 +12,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     aws_key_files = []
 
     for filename in args.filenames:
-        with open(filename, 'rb') as f:
+        with open(filename, 'r') as f:
             content = f.read()
             if re.search("AKIA[0-9A-Z]{16}", content):
                 aws_key_files.append(filename)
