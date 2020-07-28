@@ -30,6 +30,8 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     if private_key_files:
         for private_key_file in private_key_files:
             print(f'Private key found: {private_key_file}')
+            print("Please review the WeWork Application Secret Storage Policy here:")
+            print("https://connect.weworkers.io/display/SEC/Application+Secret+Storage+Policy")
         return 1
     else:
         return 0
